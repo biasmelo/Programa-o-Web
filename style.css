@@ -1,0 +1,133 @@
+/* === RESET BÁSICO === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === VARIÁVEIS DE CORES === */
+:root {
+  --primary: #0077b6;
+  --secondary: #023e8a;
+  --light: #f8f9fa;
+  --dark: #222;
+}
+
+/* === ESTILOS GERAIS === */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  background: var(--light);
+  color: var(--dark);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* === CONTAINER PADRÃO === */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* === HEADER COM FLEXBOX === */
+.header {
+  background: var(--secondary);
+  color: #fff;
+  padding: 20px 0;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav a {
+  margin-left: 20px;
+  color: #fff;
+  font-weight: bold;
+}
+.nav a:hover {
+  color: var(--primary);
+}
+
+/* === HERO === */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+.hero-content {
+  max-width: 600px;
+}
+
+/* === SOBRE === */
+.sobre {
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* === GRID DE PROJETOS === */
+.projetos {
+  margin: 40px auto;
+}
+.grid-projetos {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.card h3 {
+  margin-bottom: 10px;
+}
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* === CONTATO COM FLEX === */
+.contato-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* === FOOTER === */
+.footer {
+  background: var(--secondary);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer a {
+  color: #fff;
+}
+.footer a:hover {
+  color: var(--primary);
+}
+
+/* === RESPONSIVIDADE EXTRA === */
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+  }
+  .nav {
+    margin-top: 10px;
+  }
+}
